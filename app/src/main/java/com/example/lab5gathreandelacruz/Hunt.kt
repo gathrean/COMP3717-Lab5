@@ -7,7 +7,7 @@ import kotlin.random.Random
  * @param minion Minion
  * @author Gathrean Dela Cruz
  */
-class Hunt(minion: Minion) : Mission(minion, null), Repeatable {
+class Hunt(minion: Minion, override val repeatNum: Int) : Mission(minion, null), Repeatable {
 
     override fun repeat(times: Int, listener: MissionListener) {
         for (i in 1..times) {
@@ -23,7 +23,8 @@ class Hunt(minion: Minion) : Mission(minion, null), Repeatable {
         return when (time) {
             in 11..20 -> "a mouse"
             in 21..30 -> "a fox"
-            in 31..50 -> "a buffalo"
+            in 31..40 -> "a buffalo"
+            in 41..60 -> "a dinosaur"
             else -> "nothing"
         }
     }

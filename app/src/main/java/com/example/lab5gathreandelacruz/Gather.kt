@@ -25,7 +25,8 @@ class Gather(minion: Minion) : Mission(minion, null) {
         return when (time) {
             in 10..21 -> "bronze"
             in 22..33 -> "silver"
-            in 34..45 -> "gold"
+            in 34..44 -> "gold"
+            in 45..60 -> "diamond"
             else -> "nothing"
         }
     }
