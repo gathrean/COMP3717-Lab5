@@ -5,11 +5,11 @@ package com.example.lab5gathreandelacruz
     A0167248
  */
 fun main() {
-    // New Archer
+    // New Elf
     println("\n--------------------------------------------------------------------")
     println("--------------------------------------------------------------------\n")
-    val archer = Elf()
-    val huntMission = Hunt(archer)
+    val elf = Elf()
+    val huntMission = Hunt(elf, 3)
 
     huntMission.start(object : MissionListener {
         override fun missionStart(minion: Minion) {
@@ -69,7 +69,7 @@ fun main() {
     println("\n--------------------------------------------------------------------")
     println("--------------------------------------------------------------------\n")
     val human = Human()
-    val huntMissionHuman = Hunt(human)
+    val huntMissionHuman = Hunt(human, 2)
     huntMissionHuman.start(object : MissionListener {
         override fun missionStart(minion: Minion) {
             println("${minion.catchphrase}\n")
