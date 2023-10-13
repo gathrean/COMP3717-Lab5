@@ -1,6 +1,6 @@
 package com.example.lab5gathreandelacruz
 
-abstract class Mission(protected val minion: Minion) {
+abstract class Mission(protected val minion: Minion, protected val item: Item) {
     protected abstract fun determineMissionTime(): Int;
     protected abstract fun reward(time: Int): String;
     open fun start(listener: MissionListener) {
