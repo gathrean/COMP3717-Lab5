@@ -7,7 +7,7 @@ import kotlin.random.Random
  * @param minion Minion
  * @author Gathrean Dela Cruz
  */
-class Hunt(minion: Minion) : Mission(minion), Repeatable {
+class Hunt(minion: Minion) : Mission(minion, null), Repeatable {
 
     override fun repeat(times: Int, listener: MissionListener) {
         for (i in 1..times) {
