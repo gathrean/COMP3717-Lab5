@@ -9,6 +9,7 @@ class Elf : Minion {
     override val baseSpeed: Int = 8
     override val backpackSize: Int = 3
     override val catchphrase: String = "My arrows never miss!"
+
     fun huntReward(time: Int): String {
         return when (time) {
             in 11..20 -> "a fish"

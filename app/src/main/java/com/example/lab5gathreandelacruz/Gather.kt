@@ -7,22 +7,14 @@ import kotlin.random.Random
  * @param minion Minion
  * @author Gathrean Dela Cruz
  */
-class Gather(minion: Minion) : Mission(minion, null) {
-
-    /*
-     * Determines the mission time
-     * @return Int
-     */
+class Gather(minion: Minion, item: Item? = null) : Mission(minion, item) {
     override fun determineMissionTime(): Int {
-        return minion.backpackSize * minion.baseSpeed * Random.nextInt(0, 5)
+        return (minion.backpackSize + minion.baseSpeed + itemTimeModifier) * Random.nextInt(5)
     }
 
-    /*
-     * Determines the reward
-     * @param time Int
-     */
-    override fun reward(time: Int): String {
-        return when (time) {
+    override fun reward(): String {
+        val time = determineMissionTime()
+        return when(time) {
             in 10..21 -> "bronze"
             in 22..33 -> "silver"
             in 34..44 -> "gold"
