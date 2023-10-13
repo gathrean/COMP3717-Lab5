@@ -8,7 +8,7 @@ fun main() {
     // New Archer
     println("\n--------------------------------------------------------------------")
     println("--------------------------------------------------------------------\n")
-    val archer = Archer()
+    val archer = Elf()
     val huntMission = Hunt(archer)
 
     huntMission.start(object : MissionListener {
