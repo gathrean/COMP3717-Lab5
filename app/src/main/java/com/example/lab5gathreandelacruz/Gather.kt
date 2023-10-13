@@ -7,7 +7,7 @@ import kotlin.random.Random
  * @param minion Minion
  * @author Gathrean Dela Cruz
  */
-class Gather(minion: Minion) : Mission(minion) {
+class Gather(minion: Minion) : Mission(minion, null) {
 
     /*
      * Determines the mission time
